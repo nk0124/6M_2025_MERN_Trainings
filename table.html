@@ -8,7 +8,8 @@
 </head>
 <body>
     
-    <table border="">
+    <table border="1px" cellspacing="0" cellpadding="10px"
+    height="400px" width="400px">
         <tr>
             <td>1</td>
             <td bgcolor="red">2</td>
@@ -20,8 +21,14 @@
              <td>4</td>
         </tr>
     </table>
+
     <h1>Colspan</h1>
-    <table>
+    <table border="1px" cellspacing="0" cellpadding="10px">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
         <tr>
             <td colspan="3" align="center">4</td>
         </tr>
@@ -29,9 +36,13 @@
             <td>5</td>
             <td colspan="2">6</td>
         </tr>
+        <tr>
+            <td colspan="3" align="center">7</td>
+        </tr>
     </table>
+
     <h1>Table with rowspan</h1>
-    <table>
+    <table border="1px" cellspacing="0" cellpadding="10px">
         <tr>
             <td>1</td>
             <td>2</td>
@@ -42,6 +53,16 @@
         </tr>
         <tr>
             <td>5</td>
+        </tr>
+        <tr>
+            <td rowspan="3">6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
         </tr>
     </table>
 </body>..
