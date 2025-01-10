@@ -1,0 +1,23 @@
+
+/* *{
+    background-color: aqua;
+} */
+
+
+li{
+    font-size: 40px;
+}
+
+/* compund selector */
+
+ol li{
+    color:red;
+}
+
+ul li {
+    color:green;
+}
+
+ol ul li{
+    color:orange;
+}
