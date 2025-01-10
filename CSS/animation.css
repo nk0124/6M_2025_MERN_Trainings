@@ -1,0 +1,21 @@
+
+
+.a{
+    width:100px;
+    height:100px;
+    background-color: aqua;
+    position: relative;
+    animation:anil 10s linear 3s 
+}
+
+@keyframes anil {
+    from{
+        top:0px;
+        left:0px;
+    }
+
+    to{
+        top:0px;
+        left:100px;
+    }
+}
