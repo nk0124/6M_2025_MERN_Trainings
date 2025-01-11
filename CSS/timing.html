@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 50px;
+            width: 100px;
+            background-color: aqua;
+            margin-top: 10px;
+            position: relative;
+            animation:demo 10s 1s infinite alternate
+        }
+        @keyframes demo {
+            from{
+                top:0px;
+                left:px;
+            }
+            to{
+                top:0px;
+                left:500px;
+            }
+        }
+
+        .linear{
+            animation-timing-function: linear;
+            /* through-out same */
+        }
+        .ease-in{
+            animation-timing-function: ease-in;
+            /* start slow */
+        }
+        .ease-out{
+           animation-timing-function: ease-out; 
+           /* ends slow */
+        }
+        .ease{
+            animation-timing-function: ease;
+            /* start,end is linear but in between fast */
+        }
+        .ease-in-out{
+            animation-timing-function: ease-in-out;
+            /* start and end both are slow */
+        }
+    </style>
+</head>
+<body>
+    <div class="linear">LINEAR</div>
+    <div class="ease-in">EASE_IN</div>
+    <div class="ease-out">EASE-OUT</div>
+    <div class="ease">EASE</div>
+    <div class="ease-in-out">EASE_IN_OUT</div>
+</body>
+</html>

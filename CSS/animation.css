@@ -5,17 +5,29 @@
     height:100px;
     background-color: aqua;
     position: relative;
-    animation:anil 10s linear 3s 
+    animation-name: anil;
+    animation-duration: 3s;
+    /* animation-iteration-count: infinite;
+    animation-delay: 3s; */
+    animation-direction: alternate-reverse;
+
+    /* normal,alternate,reverse,alternate-reverse */
+    animation-fill-mode: both;
+    /* forward,backward,both */
 }
 
 @keyframes anil {
     from{
         top:0px;
         left:0px;
+        background-color: red;
     }
 
     to{
         top:0px;
         left:100px;
+        background-color: blue;
+        width: 200px;
+        border-radius: 50%;
     }
 }
