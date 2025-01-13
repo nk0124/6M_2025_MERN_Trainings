@@ -1,83 +1,32 @@
 
-div{
-    width: 100vh;
-    height: 100vh;
+
+*{
+    margin:0;
+    padding: 0;
 }
 
 .bg{
-  width: 100vh;
-  height: 100vh;
-  background-image: url('../Images/sky.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow-x: hidden; 
+    position: relative;
+    background-image: url('../Images/carimage.jpg');
+    height:100vh ;
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: animation 3s linear infinite;
 }
 
-
- .highway{
-    height:200px;
-    width: 500%;
-    background-image: url('../Images/road.jpg');
+.car{
     position: absolute;
-    display: block;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index: 1;
-    animation:highway 5s linear infinite
+    bottom: 30px;
+    left: 200px;
+    background-image: url('../Images/carsimages.webp');
+    width: 500px;
+    height: 200px;
+}
+@keyframes animation {
+    from{
+        background-position: 0px;
     }
-
-    @keyframes highway {
-        100%{
-            transform:translateX(-1400px) ;
-        }
+    to{
+        background-position: 100%;
     }
-
-    .city{
-        height: 250px;
-        width: 500px;
-        background-image: url('../Images/city.png');
-        position: absolute;
-        bottom:200px;
-        left:0;
-        right:0;
-        display: block;
-        z-index:1;
-        background-repeat: repeat-x;
-        animation:city 25s linear infinite
-    }
-
-    @keyframes city {
-        100%{
-            transform: translateX(-1400px);
-        }
-    }
-
-
-    .car{
-        width: 100px;
-        left:50%;
-        bottom:100px;
-        transform: translateX(-50%);
-        position: absolute;
-        z-index: 2;
-    }
-
-    .car img{
-        width:100%;
-        animation:car 1s linear infinite
-    }
-
-    @keyframes car {
-        100%{
-            transform: translateY(-1px);
-        }
-
-        50%{
-            tranform:translateY(-1px)
-        }
-        0%{
-            tranform:translateY(-1px)
-        }
-    }
+}
