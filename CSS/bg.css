@@ -1,0 +1,75 @@
+
+
+.main{
+    /* background-color: #86cd86;
+    hsl,hwb,rgb,hex,name */
+    height: 800px;
+    border:5px solid red;
+    background-image: url('../Images/flowers.webp');
+    background-repeat: no-repeat;
+    /* repeat,repeat-x,repeat-y,no-repeat */
+    background-position: center;
+    /* x-axis,y-axis
+    top,bottom,left,right,top left , top right, bottom left, 
+    ,bottom right, center */
+    background-size: cover;
+    /* cover- on scaling height and width of the image remains shape-margin
+    contain - on scaling height and width of the image changes to 
+    maintain the aspect radio 
+    x-axis y-aixs 
+    width heights*/
+    background-attachment: fixed;
+}
+
+.linear{
+    height: 100px;
+    width: 100px;
+    background:linear-gradient( to left ,red,yellow, blue,green 20%);
+}
+
+.repeat-linear{
+    height: 100px;
+    width: 100px;
+    margin-top:10px;
+    background:repeating-linear-gradient( to left ,red,yellow, blue,green 20%);
+}
+
+.radial{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    background: radial-gradient(purple,black,pink);
+}
+
+.repeat-radial{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    background: repeating-radial-gradient(purple,black,pink 33%);
+}
+
+.conic{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    background: conic-gradient(purple,black,pink);
+}
+.repeat-conic{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    background:repeating-conic-gradient(purple,black,pink, 20%)
+}
+
+.child{
+    height: 100px;
+    width: 100px;
+    background-color: rbga(255,0,0,0.1);
+    /* opacity - (0,100) , point  */
+    color:white;
+}
+
+opacity{
+    height: 100px;
+    background: linear-gradient(rgb(255,0,0),rgba(255,0,0,0.5));
+}
