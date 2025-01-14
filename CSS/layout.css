@@ -1,0 +1,58 @@
+
+
+.container{
+    height: 300px;
+    background-color: black;
+}
+
+.row1{
+    height: 100px;
+    background-color: bisque;
+}
+
+.row2{
+    height: 100px;
+    background-color: blue;
+}
+
+.child1{
+    height: 100px;
+    background-color: aqua;
+    width: 50%;
+    float: left;
+}
+
+.child2{
+    height: 100px;
+    background-color:lightblue ;
+    width: 50%;
+    float: left;
+}
+
+.row3{
+    height: 100px;
+    background-color: pink;
+}
+
+.child3{
+    height: 100px;
+    background-color: red;
+    width: 33%;
+    float: left;
+}
+
+.child4{
+    height: 100px;
+    background-color: yellow;
+    width: 33%;
+    float: left;
+}
+.child5{
+    height: 100px;
+    background-color: orange;
+    width: 33%;
+    float: left;
+}
+
+
+
