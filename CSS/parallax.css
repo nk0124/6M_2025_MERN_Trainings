@@ -1,0 +1,65 @@
+
+.pimg1{
+    height: 800px;
+    background-image: url('../Images/nature.png');
+}
+
+.pimg1,.pimg2,.pimg3{
+    margin:0px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.pimg2{
+    height: 500px;
+    background-image: url('../Images/nature1.png');
+}
+
+.pimg3{
+    height: 400px;
+    background-image: url('../Images/nature2.png');
+}
+.text{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    color:black;
+    font-size:27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.text1{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    color:black;
+    font-size:27px;
+    letter-spacing: 8px;
+
+}
+
+.textBg{
+    background-color:gray ;
+    color:white;
+    padding:20px;
+}
+
+
+.section,.section1,.section2{
+    padding:10px;
+    text-align: center;
+}
+
+.section-one,.section-two ,.section-three{
+    background-color: gray;
+    color:white;
+}
+
+
