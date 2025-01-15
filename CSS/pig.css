@@ -1,0 +1,135 @@
+
+.pig{
+    /* font-size:calc(50vmin/260); */
+    position: absolute;
+    margin-left:250px;
+    margin-top: -45px;
+    width: 260px;
+    height: 330px;
+}
+
+.pig div{
+    position: absolute;
+}
+
+
+.left-ear{
+    background-color: lightpink;
+    border:10px lightpink double;
+    border-radius: 50%;
+    height: 50px;
+    width: 45px;
+     
+}
+
+.right-ear{
+    background-color: lightpink;
+    border:10px lightpink double;
+    border-radius: 50%;
+    height: 42px;
+    width: 60px;
+    margin-left: 100px;
+
+}
+
+.head{
+    background-color: lightpink;
+    border:25px lightpink double;
+    border-radius: 50%;
+    height: 100px;
+    width: 120px;
+    position: absolute;
+
+}
+
+.left-eye{
+    background-color: black;
+    border-radius: 50%;
+    border:10px black double;
+    height: 5px;
+    width: 7px;
+}
+
+.right-eye{
+    background-color: black;
+    border-radius: 50%;
+    border:10px black double;
+    height: 5px;
+    width: 7px;
+    margin-left:90px;
+}
+
+.nose{
+     background-color: brown;
+     border-radius: 50%;
+     border:15px brown double;
+     height:25px ;
+     width: 30px;
+     margin:25px 25px;
+
+}
+
+.nose-inner-left{
+    background-color:black ;
+    border-radius: 50%;
+    border:3px black double;
+    height: 4px;
+    width: 6px;
+    margin:15px 15px;
+}
+
+.nose-inner-right{
+    background-color:black ;
+    border-radius: 50%;
+    border:3px black double;
+    height: 4px;
+    width: 6px;
+    margin-left:2px;
+    margin-top: 15px;
+    
+
+}
+
+.body{
+    background-color: brown;
+    border-radius: 50%;
+    border:30px brown double;
+    height:220px;
+    width: 185px;
+    margin-left:220px;
+    margin-top: 100px;
+    display: absolute;
+    
+}
+
+.motta {
+    display: relative;
+}
+
+.foot{
+    background-color: lightpink;
+    border-radius: 50%;
+    height: 6px;
+    width: 8px;
+}
+
+.left-leg{
+    background-color: lightpink;
+    border-radius: 50%;
+    border:22px lightpink double;
+    height: 10px;
+    width: 7px;
+    margin-top:-20px;
+    margin-left:360px;  
+}
+
+.right-leg{
+    background-color: lightpink;
+    border-radius: 50%;
+    border:22px lightpink double;
+    height: 10px;
+    width: 7px;
+    margin-top:-20px;
+    margin-left:260px;  
+}
+
