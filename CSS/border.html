@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            margin-top: 10px;
+        }
+
+        .c1{
+            border-style:solid;
+            border-color: red;
+            border-width: 10px;
+        }
+        .c2{
+            /* short hand property */
+            border:red 10px double;
+        }
+
+        .c3{
+            border:10px pink dotted;
+        }
+        .c4{
+            border:10px pink dashed;
+        }
+        .c5{
+            border:10px red inset;
+        }
+        .c6{
+            border:10px red outset;
+        }
+        .c7{
+            border:10px ridge red;
+            border-bottom-left-radius: 70px;
+            border-top-right-radius: 70px;
+        }
+        .c8{
+            border:10px groove red;
+            border-top-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+        }
+        .c9{
+            border-top:10px blue dashed;
+            border-left: 5px green double;
+            border-right:5px orange solid;
+            border-bottom:5px pink dotted;
+            border-radius:50%;
+        }
+
+        .triangle{
+            height: 0;
+            /* width: 100px; */
+            width: 0;
+            /* backgound-color:yellow; */
+            border-bottom:50px blue solid;
+            border-left:transparent 25px solid;
+            border-right:transparent 25px solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- types of border
+    2D-> solid,double,dotted,dashed
+    3D-> insert,outset,ridge,groove -->
+    <div class="main c1"></div>
+    <div class="main c2"></div>
+    <div class="main c3"></div>
+    <div class="main c4"></div>
+    <div class="main c5"></div>
+    <div class="main c6"></div>
+    <div class="main c7"></div>
+    <div class="main c8"></div>
+    <div class="main c9"></div>
+    <div class="triangle"></div>
+</body>
+</html>
