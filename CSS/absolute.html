@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+        }
+        .blue{
+            background-color:blue;
+            width:120px;
+        }
+        .red{
+            background-color: red;
+            position: absolute;
+            /* position: relative; */
+            top:0px;
+            z-index: -1;
+            /* in stack of element helps defining which item will be 
+            top the element with highest zindex will be at top and the element
+            with lowest zindex will be in bottom */
+            width: 140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blue"></div>
+    <div class="red"></div>
+</body>
+</html>
