@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  line-height: 30px;
+  background: whitesmoke;
+  position: fixed;
+}
+
+nav .heading p {
+  color: peru;
+  float: left;
+  font-size: 25pt;
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  list-style: none;
+  float: right;
+  padding: 8px;
+}
+
+.nav-list li {
+  display: inline-block;
+  justify-content: space-evenly;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.img {
+  text-align: center;
+  height: 800px;
+  width: 1500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../Images/home-2-hotspot-img1.jpg");
+}
+
+.text {
+  text-align: center;
+  position: absolute;
+  margin: 60%;
+  height: 28px;
+  width: 120px;
+  background-color: #f78f10;
+}
+
+.button {
+  color: white;
+  text-align: center;
+  margin-top: 0px 15px;
+  padding: 26px;
+}
+
+.title{
+  color:peru;
+  font-size: x-large; 
+  margin-bottom: 10px; 
+}
+
+
+
+.image img {
+  width: 250px;
+  box-shadow: 3px;
+  /* border:4px red solid; */
+  box-shadow: 5px 5px 15px white;
+}
+
+h1 {
+  color: rgba(203, 168, 130, 255);
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: small;
+}
+
+.des {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: small;
+}
+
+.price {
+  color: peru;
+  font-size: large;
+  margin-bottom: 5px;
+}
+
+.btn {
+  background-color: #f78f10;
+  text-align: center;
+  color: white;
+  border: 2px coral solid;
+  padding: 3px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Distributes the boxes evenly */
+  gap: 5px; /* Adds space between the boxes */
+}
+
+.box {
+  flex: 1; /* Makes all boxes take equal space */
+  text-align: center;
+  padding: 20px;
+    margin: 5px;
+  height: 400px;
+}
+
+.boxt {
+  flex: 1; /* Makes all boxes take equal space */
+  margin: 20px;
+  
+}
+
+.images {
+  margin-top: 70px;
+  background-image: url("../Images/bg-header.jpg");
+  height: 500px;
+  background-image: cover;
+  background-color: peru;
+  background-blend-mode: soft-light;
+}
+
+
+
+.content {
+  text-align: justify;
+  font-size: large;
+  line-height: 1.3em;
+}
+
+#i1 {
+  float: right;
+  width: 45%;
+  height: 300px;
+  margin-left: 15px;
+}
+
+.footer{
+  background-color: peru; 
+  text-align: center;
+  margin-top: 5px;
+  padding: 15px;
+  color: white;
+}
