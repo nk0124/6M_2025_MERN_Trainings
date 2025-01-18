@@ -1,0 +1,168 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+header{
+    background:url(../Images/zomatoimg.avif.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 450px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:90%;
+    height: 60px;
+    margin:0 auto;
+
+}
+
+nav .app_link a{
+    text-decoration: none;
+    color:white;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+nav .nav_items ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+nav .nav_items ul li a{
+    text-decoration: none;
+    color:white;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.text{
+    font-weight: bolder;
+    font-size: 35pt;
+    color:white;
+    padding: 8px;
+    margin-top: 15px;;
+}
+
+h1{
+    color:white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin:30px 0;
+    margin-top: 10px;
+}
+
+.content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+}
+
+.content img{
+    font-weight: 60;
+    font-size: x-small;
+    height: 60px;
+    width: 300px;
+}
+
+#id2{
+    font-weight:600;    
+}
+
+.search_container{
+    align-items: center;
+    display: flex;
+    background-color: white;
+    height: 3.4rem;
+    width: 75%;
+    border-radius: 7px;
+}
+
+.search_container .search-left{
+    display: inline-flex;
+    padding:0 1rem;
+    width: 30%;
+    border-right:2px solid gray ;
+
+}
+
+.search_container .search-right{
+    display: inline-flex;
+    padding: 0 1rem;
+    width: 55%;
+}
+
+.search_container input{
+    border:0;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color:gray;
+    width: 100%;
+    margin-left: 6px;
+}
+
+.search_container .search-left i{
+    color:rgb(248,125,125);
+    font-size: 20px;
+}
+
+.search_container .search-right i{
+    color:rgb(160, 159, 159);
+    font-size: 20px;
+}
+
+.main-card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 22px;
+    gap:30px;
+}
+
+.product-card{
+    border-radius: 20px;
+    border:1px solid rgb(119,112,112);
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.product-card img{
+    width: 100%;
+    height: 35vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#id1{
+    color:gray;
+}
+
+.product-content{
+    padding: 20px;
+}
+
+.product-content h2{
+    margin:10px 0;
+    font-size: 2rem;
+    font-weight: 200;
+}
