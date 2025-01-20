@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child{
+            color:red;
+        }
+        p:last-child{
+            color:yellow;
+        }
+        p:nth-child(4){
+            color:orchild;
+        }
+
+        input:required{
+            background-color: lightgreen;
+        }
+        input:focus{
+            background-color: lightblue;
+        }
+        input:read-only{
+            background-color: aqua;
+        }
+
+        .btn{
+            background-color: rgb(173,216,203);
+            border:transparent solid;
+        }
+
+        .btn:hover{
+            background-color: rgb(77,143,165);
+            width: 200px;
+            border:rgb(181,225,240) 4px soild;
+        }
+        
+        .link{
+            color:gray;
+            text-decoration: none;
+        }
+
+        .link:hover{
+            text-decoration: underline;
+            color:green;
+        }
+       
+        a:link{
+            /* unvisited */
+            color:yellow;
+        }
+
+        a:active{
+            color:pink;
+        }
+        a:visited{
+            color:lightblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- pseudo classes - specific state of an element : hover
+    pseudo elements - specific part of an element :: first-line -->
+
+    <div>
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>Para 3</p>
+        <p>Para 4</p>
+        <p>para 5</p>
+        <p>Para 6</p>
+        <p>Para 7</p>
+    </div>
+    <div>
+        <span>Hello</span>
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>Para 3</p>
+        <p>Para 4</p>
+        <p>para 5</p>
+        <p>Para 6</p>
+        <p>Para 7</p>
+    </div>
+    <div>
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <p>Para 3</p>
+        <p>Para 4</p>
+        <p>para 5</p>
+        <p>Para 6</p>
+        <p>Para 7</p>
+   
+    </div>
+    <a href="abc.html">Click on the Link</a>
+    <br>
+    Email: <input required><br>
+    Password: <input><br>
+    Name:<input readonly><br>
+    Contact:<input><br>
+    <button class="btn">Hover me!</button>
+    <a href="#" class="link">Classroom</a>
+</body>
+</html>
