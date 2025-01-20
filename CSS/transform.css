@@ -1,0 +1,45 @@
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}
+
+/* rorate 
+scale 
+skew
+translate */
+
+.div{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: demo 10s;
+}
+
+/* transform:rorate(50deg);
+transform:rorateX(50deg);
+transform:rorateY(50deg);
+
+transform : scale(0.3);
+transform :skew(10deg); */
+
+/* transform : translateX(400px);
+transform : translateY(400px);
+tranform : translateZ(400deg);
+
+transform : translate(400px) translateY(200px); */
+
+@keyframes demo {
+    from{
+        transform:rotateY(0deg);
+    }
+
+    to{
+        transform: rotateY(1800deg);
+    }
+}
