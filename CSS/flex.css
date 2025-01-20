@@ -1,0 +1,27 @@
+
+
+.container{
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+}
+
+.div1{
+    /* width:200px; */
+    height: 100px;
+    background-color: red;
+    flex:1 6 200px;
+
+    /* flex-grow:1;
+    flex-shrink: 6;
+    flex-basis: 200px; */
+}
+
+.div2{
+    height: 100px;
+    background-color: green;
+
+    flex-grow: 5;
+    flex-shrink: 1;
+    flex-basis: 200px;
+}
