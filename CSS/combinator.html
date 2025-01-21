@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            background-color: black;
+        }
+        /* descendent selectors  */
+        .main img{
+            height: 200px;
+        }
+        /* direct child */
+        .main>img{
+            width: 400px;
+        }
+        /* +adjacent sibling */
+        .main+img{
+            border:5px solid red;
+        }
+         /* gernal sibling */
+         .main~img{
+            opacity: 0.5;
+         }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <img src="../Images/nature.png" alt="">
+        <img src="../Images/nature1.png" alt="">
+        <section>
+            <img src="../Images/bg-header.jpg" alt="">
+        </section>
+    </div>
+    <!-- <span></span> -->
+     <img src="../Images/flowers.webp" alt="">
+     <img src="../Images/ccc.png" alt="">
+</body>
+</html>
