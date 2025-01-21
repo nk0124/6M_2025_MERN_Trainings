@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: blueviolet;
+            border:transparent;
+            color:white;
+            width: 80px;
+            /* transition: background-color 4s , width 6s; */
+            transition: all 4s;
+        }
+
+        .btn:hover{
+            background-color: orchid;
+            width: 100px;
+        }
+        .btn2{
+            border:none;
+            transition: border 4s;
+        }
+        .btn2:focus{
+            border:2px solid lightblue;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Hover Me!</button>
+    <button class="btn2">Btn 2</button>
+</body>
+</html>

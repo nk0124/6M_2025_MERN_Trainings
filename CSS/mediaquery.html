@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: red;
+        }
+        @media  screen and (min-width:400px){
+            p{
+                background-color: blue;
+            }
+        }
+        @media screen and (min-width:700px) {
+            p{
+                background-color: orchid;
+            }
+        }
+
+        .container{
+            height: 50px;
+            width: 400px;
+        }
+        .child1, .child5{
+            background-color: aqua;
+        }
+        .child2, .child6{
+            background-color: pink;
+        }
+        .child3, .child7{
+            background-color: lightblue;
+        }
+        .child4{
+            background-color: green;
+        }
+        @media screen  and (max-width:500px){
+            .container{
+                width: 100vw;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- mobile , tablet , laptops  -->
+     <!-- width-400px ;
+     min-width -400px+
+     max-width -400px- -->
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptate atque adipisci nulla voluptas commodi sit consectetur beatae eos reprehenderit dolores velit provident maxime fuga officiis dicta ad, ut ullam earum! Illo similique odio, dolorem suscipit voluptas tenetur provident temporibus quidem reprehenderit necessitatibus iste incidunt tempore nemo sit natus quo molestias ipsum fugit facere, deserunt mollitia nihil voluptatem eum enim. Libero architecto, quia facere aliquam eveniet qui recusandae quod possimus! Est, voluptatum aliquid laudantium cumque soluta iure quisquam nostrum aspernatur illo minima expedita sit dolore corrupti necessitatibus eveniet ratione hic quis ullam voluptas velit consequuntur nobis voluptatibus doloribus iste. Numquam.</p>
+
+     <div class="container">
+          <div class="child1"></div>
+          <div class="child2"></div>
+          <div class="child3"></div>
+          <div class="child4"></div>
+          <div class="child5"></div>
+          <div class="child6"></div>
+          <div class="child7"></div>
+     </div>
+</body>
+</html>
