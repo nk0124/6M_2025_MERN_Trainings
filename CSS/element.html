@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+    
+    <style>
+        p::first-letter{
+            color:red;
+            font-size: 30px;
+        }
+        p::first-line{
+            color:aqua;
+        }
+        p::selection{
+            background-color: green;
+        }
+        label:after{
+            content:"*";
+            color:red;
+        }
+        label::after{
+            content:"*";
+            color:red;
+        }
+        input::placeholder{
+            font-family: "Alex Brush" , serif;
+        }
+        li::marker{
+            color:red;
+        }
+        input[type="password"]{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus at id quasi a magnam amet enim laborum adipisci, quibusdam illo odit libero, sed, accusamus doloribus. Possimus id nostrum saepe odit? Voluptates consectetur, sapiente minima neque sit expedita cum ab officia, esse aperiam explicabo sint eligendi recusandae perferendis? Unde, natus minima.</p>
+    <label>Email</label>
+    <input type="email">
+    <br>
+    <label>Password</label>
+    <input type="password" placeholder="Enter your name">
+    <br>
+    <label>Name</label>
+    <input type="text">
+    <br>
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+</body>
+</html>
