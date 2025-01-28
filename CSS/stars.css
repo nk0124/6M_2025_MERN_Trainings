@@ -1,0 +1,82 @@
+
+
+/* Set up body styling for centering */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* The center point of the star (just a reference, you can remove or style it as you want) */
+.center {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* The container that holds the balls */
+.star {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the balls */
+.ball {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: rotate-in-star 5s linear infinite;
+}
+
+/* Different animation delays for each ball */
+.ball-1 {
+    animation-delay: 0s;
+}
+.ball-2 {
+    animation-delay: 1s;
+}
+.ball-3 {
+    animation-delay: 2s;
+}
+.ball-4 {
+    animation-delay: 3s;
+}
+.ball-5 {
+    animation-delay: 4s;
+}
+
+/* Star-like motion animation */
+@keyframes rotate-in-star {
+    0% {
+        transform: rotate(0deg) translateX(90px) rotate(0deg);
+    }
+    20% {
+        transform: rotate(72deg) translateX(90px) rotate(-72deg);
+    }
+    40% {
+        transform: rotate(144deg) translateX(90px) rotate(144deg);
+    }
+    60% {
+        transform: rotate(216deg) translateX(90px) rotate(-216deg);
+    }
+    80% {
+        transform: rotate(288deg) translateX(90px) rotate(288deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(90px) rotate(360deg);
+    }
+}

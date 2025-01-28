@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown a{
+            color:black;
+            text-decoration: none;
+        }
+        .dropdown-content li a{
+            color:black;
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .dropdown-content{
+            box-shadow: 0px 0px 10px gray;
+            width: 120px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: none;
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+    <a href="#">Profile</a>
+       <div class="dropdown-content">
+           <ul>
+             <li><a href="#">Settings</a></li>
+             <li><a href="#">Logout</a></li>
+           </ul>
+
+       </div>
+    </div>
+</body>
+</html>

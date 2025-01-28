@@ -60,6 +60,7 @@
 .section-one,.section-two ,.section-three{
     background-color: gray;
     color:white;
+    text-align: justify;
 }
 
 

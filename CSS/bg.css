@@ -16,13 +16,14 @@
     /* cover- on scaling height and width of the image remains shape-margin
     contain - on scaling height and width of the image changes to 
     maintain the aspect radio 
-    x-axis y-aixs 
+    x-axis y-aixs 3
+    
     width heights*/
     background-attachment: fixed;
 }
 
 .linear{
-    height: 100px;
+    height: 100px; 
     width: 100px;
     background:linear-gradient( to left ,red,yellow, blue,green 20%);
 }
