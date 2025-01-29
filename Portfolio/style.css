@@ -1,0 +1,39 @@
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+header{
+    background-color: whitesmoke;
+    height: 90px;
+    width: 100%;
+}
+.container{
+    float: left;
+    padding: 5px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bolder;
+    color:black;
+    padding: 10px;
+}
+
+.nav-list{
+    display: flex;
+    float: right;
+}
+
+.nav-list li{
+    list-style: none;
+    justify-content: space-evenly;
+    margin-left: 15px;
+    margin-right: 20px;
+    padding:20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+}

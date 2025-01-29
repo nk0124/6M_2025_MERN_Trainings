@@ -1,0 +1,16 @@
+
+.bg-img{
+    background-image: url(./Images/portrait-adult-woman-working-laptop.jpg);
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+}
+
+
+.content {
+    margin-top: 145px;
+    margin-left: 260px;
+    
+}

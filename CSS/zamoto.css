@@ -166,3 +166,7 @@ h1{
     font-size: 2rem;
     font-weight: 200;
 }
+
+.option{
+    border-style: none;
+}
