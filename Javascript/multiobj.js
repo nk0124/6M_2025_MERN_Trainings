@@ -11,6 +11,7 @@ let car={
     }
 }
 
+console.log(typeof car) // tyep -> object
 console.log(car.car1.name);
 console.log(car.car2.color);
 // add key value 
