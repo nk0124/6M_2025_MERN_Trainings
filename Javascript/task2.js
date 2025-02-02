@@ -67,9 +67,8 @@ console.log("Numbers divisible by 3:", divisibleByThree);
 
 
 let arr=[1,2,3,4,5,6]
-// 6, 1,2,3,4,5,  arr      
+// 6, 1,2,3,4,5,  arr=1,2,3,4,5      
 let x=arr.pop()
 console.log(x)
 arr.unshift(x)
-arr.unshift(x,...arr)
 console.log(arr)
