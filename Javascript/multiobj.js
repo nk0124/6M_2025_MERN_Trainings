@@ -1,5 +1,5 @@
 // limitation of object -> it does not work with looping
-
+// beacuse key are unique
 let car={
     car1:{
         name:"thar",
@@ -19,3 +19,21 @@ console.log(car)
 
 delete car.car1.name
 console.log(car)
+
+
+let bike={
+    bikesection:{
+           bike1:{
+            name:"hero",
+            color:"black"
+           },
+        bike2:{
+            name:"discover",
+            color:"red"
+        }
+    }
+}
+
+console.log(bike.bikesection);
+console.log(bike.bikesection.bike1.name);
+console.log(bike.bikesection.bike2.color)
