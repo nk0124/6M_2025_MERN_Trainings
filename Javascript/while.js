@@ -16,3 +16,11 @@ while(k>=0){
 //     console.log(i);
 //     i++;
 // }
+
+
+// dowhile
+let x=100
+do{
+    console.log(x)
+    x++
+}while(x<=10)
