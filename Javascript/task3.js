@@ -44,3 +44,14 @@ let foodItems={
 }
 console.log(foodItems.veg.c);
 
+
+// flaten array
+const nestedArray = [1, [2, [3, [4, 5]]]]
+
+const arr=[nestedArray[0],...nestedArray[1]]
+console.log(arr);
+const arr2=[arr[0], arr[1],...arr[2]]
+console.log(arr2);
+let arr3=[arr2[0], arr2[1], arr2[2],...arr2[3]]
+console.log(arr3);
+
