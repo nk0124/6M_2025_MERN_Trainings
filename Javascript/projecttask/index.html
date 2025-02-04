@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button onclick="calculateSum()">Click</button>
+     <h1 id="sum"></h1>
+    <script>
+        function calculateSum(){
+            // user input
+            let a=prompt("enter the first number");
+            let  b=prompt("enter the second number");
+             
+            let sum = a+b;
+            console.log(sum);
+         document.getElementById("sum").innerHTML=sum;
+        }
+    </script>
+</body>
+</html>
