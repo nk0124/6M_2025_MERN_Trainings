@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My GST Calculator</h1>
+     <table>
+        <tr>
+            <td>Product Name</td>
+            <td>
+                <input type="text" id="pn">
+            </td>
+        </tr>
+        <tr>
+            <td>Product Price</td>
+            <td>
+                <input type="text" id="pp">
+            </td>
+        </tr>
+        <tr>
+            <td>Product Quality</td>
+            <td>
+                <input type="text" id="pq">
+            </td>
+        </tr>
+        <tr>
+            <td>Rate</td>
+            <td>
+                <select name="" id="rate">
+                    <option value="5">5%</option>
+                    <option value="12">12%</option>
+                    <option value="18">18%</option>
+                    <option value="28">5%</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Intrastate/Intersate</td>
+            <td>
+                <select name="" id="ps">
+                    <option value="0">Intrastate</option>
+                    <option value="1">Intersate</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calculateGST()">Calculate GST</button>
+            </td>
+        </tr>
+     </table>
+     <table>
+        <tr>
+            <td>Product Name</td>
+            <td>Product Price</td>
+            <td>Product Quality</td>
+            <td>Amount</td>
+        </tr>
+        <tr id="tr1">
+            
+        </tr>
+        <tr id="tr2">
+            
+        </tr>
+        <tr id="tr3">
+            
+        </tr>
+        <tr id="tr4">
+            
+        </tr>
+     </table>
+
+    <script>
+
+        function calculateGST(){
+            let pn=document.getElementById("pn").value;
+            let pp=document.getElementById("pp").value;
+            let pr=document.getElementById("rate").value;
+            let pq=document.getElementById("pq").value;
+            let ps=document.getElementById("ps").value;
+        //    alert(pn+" "+pp+" "+pr+" "+pq+" "+ps)
+           let total=pp*pq;
+           if(ps==0){
+             let SGST=pr/2
+             let CGST = pr/2;
+             let pay=total+(total*SGST/100)+(total*CGST/100);
+             document.getElementById("tr1").innerHTML="<td>"+pn+"</td><td> Rs"
+                +pp+"</td>"+"</td><td> Rs"
+                +pq+"</td>"+"</td><td> Rs"
+                +total+"</td>";
+                 document.getElementById("tr2").innerHTML="<td> SGST"+SGST+"%</td><td></td></td><td></td> Rs"+total*SGST/100+"</td><td>"
+                document.getElementById("tr3").innerHTML="<td> CGST"+CGST+"%</td><td></td></td><td></td></td><td> Rs"
+                +total*CGST/100+"</td>";
+                document.getElementById("tr4").innerHTML="<td> Toatal</td><td></td>"+"</td><td></td>"+"</td><td> Rs"
+                +pay+"</td>";
+        } else{
+            let IGST=pr;
+             let pay=total+(total*IGST/100);
+             document.getElementById("tr1").innerHTML="<td>"+pn+"</td><td>Rs"
+                +pp+"</td>"+"</td><td> Rs"
+                +pq+"</td>"+"</td><td> Rs"
+                +total+"</td>";
+                document.getElementById("tr2").innerHTML=""
+                document.getElementById("tr3").innerHTML="<td> IGST"+IGST+"%</td><td></td></td><td></td></td><td> Rs"
+                +total*IGST/100+"</td>";
+                document.getElementById("tr4").innerHTML="<td> Toatal</td><td></td>"+"</td><td></td>"+"</td><td> Rs"
+                +pay+"</td>";
+       
+        }
+    }
+    </script>
+</body>
+</html>
