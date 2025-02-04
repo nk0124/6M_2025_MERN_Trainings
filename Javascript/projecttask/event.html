@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getMsg()">Click</button>
+    <h1 id="name"></h1>
+    <!-- events -->
+    <!-- onclick, ondblclick, onmouseover, onmouseout, onkeyup, onkeydown, onblur, onfocus, onsubmit, onchange, onload, onscroll -->
+    <!-- onClick -->
+    <!-- functions -->
+    <script>
+        function getMsg(){
+            // console.log("hello")
+            // alert("hello")
+            // confirm("You want to login?")
+          var name=  prompt("Enter name?")
+          console.log(name);
+        //   output.innerText="<u>"+name+"</u>"
+          document.getElementById("name").innerHTML="<u>"+name+"</u>"
+        }
+    </script>
+</body>
+</html>
