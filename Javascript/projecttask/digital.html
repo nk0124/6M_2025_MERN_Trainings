@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="startTime()">
+
+        <h2>Digital Clock</h2>
+         <div id="time"></div>
+    <script>
+        function startTime(){
+            const todayDate = new Date();
+            let hours = todayDate.getHours();
+            console.log(hours)
+            let mintues=todayDate.getMinutes();
+            let seconds=todayDate.getSeconds();
+            
+    
+            document.getElementById("time").innerHTML=hours + ":" + mintues+ ":" + seconds;
+            setTimeout(startTime,1000);
+        }
+    </script>
+</body>
+</html>
