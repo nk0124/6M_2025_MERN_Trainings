@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>A</label>
+    <input id="a">
+    <br>
+    <label>B</label>
+    <input id="b">
+    <br>
+    <button onclick="sum()">sum</button>
+    <div id="result"></div>
+    <script>
+        function sum(){
+            //get and set value
+            var a= parseInt(document.getElementById("a").value)
+            // console.log(a, typeof(a));
+            var b= Number(document.getElementById("b").value) 
+            // console.log(b, typeof(b));
+            var c=a+b
+            // document.getElementById("result").innerHTML="The value of a is "+ a + "<br>The value of b is "  + b + "<br>The result is " + c
+            document.getElementById("result").innerHTML=`The value of a is ${a} <br> The value of b is ${b} <br> The result  is ${a+b}`
+        }
+    </script>
+</body>
+</html>

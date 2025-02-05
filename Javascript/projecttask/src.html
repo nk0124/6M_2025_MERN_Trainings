@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <style>
+      img{
+        height: 200px;
+        width:350px;
+      }
+   </style>
+<body>
+    <!-- <img src="./nature1.png" 
+    onmouseover="changeImg('nature.png')"  onmouseout="changeImg2('nature1.png')"
+    alt="" id="img1"> -->
+    <img src="./nature1.png" 
+    onmouseover="changeImg('nature.png')"  onmouseout="changeImg('nature1.png')"
+    alt="" id="img1">
+
+    <script>
+        //  function changeImg(){
+        //  document.getElementById("img1").src="nature.png"
+        //  }
+        //  function changeImg2(){
+        //  document.getElementById("img1").src="nature1.png"
+        //  }
+        function changeImg(x){
+            // console.log(x);
+            document.getElementById("img1").src=x;
+        }
+
+
+    </script>
+</body>
+</html>
