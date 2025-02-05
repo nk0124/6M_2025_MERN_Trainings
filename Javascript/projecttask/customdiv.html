@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: dimgrey;        
+        }
+     h1{
+        text-align: center;
+     }
+     .container{
+        justify-items: center;
+     }
+    table{
+        box-shadow:0 0 15px 10px whitesmoke ;
+        height: 280px;
+        width: 400px;
+        padding: 10px;
+        margin-top: 100px;
+        background: white;
+    }
+    
+    button{
+        margin-top: 10px;
+    }
+   .custom{
+     height: 500px;
+     width:250px;
+     text-align: center;
+   }
+</style>
+<body>
+        <h1>Custom Div</h1>
+        <div class="container">
+        <table>
+            <tr>
+                <th><label >Height</label></th><br>
+                <td><input type="text" id="height" ></td>
+            </tr>
+            <tr>
+                <th><label >Width</label></th>
+                <td><input type="text" id="width" ></td>
+            </tr>
+            <tr>
+                <th><label >Color</label></th>
+                <td><input type="text" id="color" ></td>
+            </tr>
+            <tr>
+                <th><label >Text</label></th>
+                <td><input type="text" id="text" ></td>
+            </tr>
+            <tr>
+                <th><label >Background -color</label></th>
+                <td><input type="text" id="bgcolor" ></td>
+            </tr>
+            <tr>
+                <td>
+                    <button  onclick="createCustomDiv()">Create</button>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+        <div class="custom">
+        <div id="result">Result</div>
+       </div>
+    <script>
+        function createCustomDiv(){
+            // console.log("hello");
+            // get and set the value
+            var height=parseInt(document.getElementById("height").value);
+            var width=parseInt(document.getElementById("width").value);
+            var color=document.getElementById("color").value;
+            var text=document.getElementById("text").value;
+            var bgcolor=document.getElementById("bgcolor").value;
+            
+            var div=document.createElement('div');
+            div.style.height=height;
+            div.style.width = width;
+            div.style.color = color;
+            div.style.backgroundColor = bgcolor;
+            div.classList.add('custom-div');
+            div.textContent = text;
+
+            var result = document.getElementById('result');
+            result.innerHTML = '';
+            result.appendChild(div);
+        }
+    </script>
+</body>
+</html>
