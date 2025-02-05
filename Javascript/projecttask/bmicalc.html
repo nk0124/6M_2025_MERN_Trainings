@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmi Calculator</title>
+    <style>
+        body{
+            background-color: darkgray;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+              margin-top: 100px;
+              width: 400px;
+              box-shadow: 0px 0px 20px 10px blanchedalmond;
+              text-align: center;
+              background: white;
+              padding: 50px;
+              border-radius: 10px;
+        }
+
+        input{
+            margin-bottom: 10px;
+        }
+       button{
+        margin-top: 10px;
+       }
+       .res{
+        margin-top:17px;
+        font-size: 15pt;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <p>Height(cm)</p>
+        <input type="number" id="height">
+        <br>
+        <p>Weight(kg)</p>
+        <input type="number" id="weight">
+        <br>
+        <button onclick="bmiCalculate()">Calculate</button>
+        <div class="res" id="result">Result</div>
+    </div>
+
+    <script>
+        function bmiCalculate(){
+            // console.log("hello")
+         let height=document.getElementById("height").value;
+        //  console.log("type of",typeof height)
+         let weight=document.getElementById("weight").value;
+         let result=document.getElementById("result");
+        
+         if(height === "" || isNaN(height) || height<0){
+             result.innerText="Provide a valid height!";
+            // console.log("valid a number")
+         } else if(weight === "" || isNaN(weight) || weight<0){
+            result.innerText="Provide a valid weight!";
+         }
+         else{
+            let bmi=(weight/((height *height)/10000)).toFixed(2);
+            if(bmi<18.6){
+                result.innerHTML=`Under Weight :<span>${bmi}</span>`
+            } else if(bmi>=18.6 && bmi<24.9){
+                  result.innerHTML=`Noraml :<span>${bmi}</span>`;
+            }
+            else{
+                result.innerHTML=`Over Weight :<sapn>${bmi}</span>`
+            }
+         }
+
+        }
+    </script>
+</body>
+</html>
