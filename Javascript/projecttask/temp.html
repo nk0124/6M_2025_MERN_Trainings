@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+        .main-image {
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .thumbnail {
+            width: 100px;
+            height: 80px;
+            cursor: pointer;
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Image -->
+        <img src="sky.jpg" id="mainImg" class="main-image">
+
+        <!-- Thumbnails -->
+        <div class="thumbnail-container">
+            <img src="nature.png" class="thumbnail" 
+                onmouseover="changeMainImage('nature.png')" 
+                onmouseout="resetMainImage()">
+
+            <img src="nature1.png" class="thumbnail" 
+                onmouseover="changeMainImage('nature1.png')" 
+                onmouseout="resetMainImage()">
+
+            <img src="flowers.webp" class="thumbnail" 
+                onmouseover="changeMainImage('flowers.webp')" 
+                onmouseout="resetMainImage()">
+
+            <!-- <img src="nature2.png" class="thumbnail" 
+                onmouseover="changeMainImage('nature2.jpg')" 
+                onmouseout="resetMainImage()"> -->
+
+        </div>
+    </div>
+
+    <script>
+        // Store original main image
+        let originalImage = "sky.jpg";
+
+        function changeMainImage(newSrc) {
+            document.getElementById("mainImg").src = newSrc;
+        }
+
+        function resetMainImage() {
+            document.getElementById("mainImg").src = originalImage;
+        }
+    </script>
+
+</body>
+</html>
