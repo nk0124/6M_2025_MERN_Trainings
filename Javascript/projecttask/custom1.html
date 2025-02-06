@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myid{
+            border:2px solid blue;
+        }
+    </style>
+</head>
+<body id="body">
+    <label>Bg-color</label>
+    <input id="bgcolor">
+    <br>
+    <label>height</label>
+    <input id="height">
+    <br>
+    <label>Width</label>
+    <input id="width">
+    <br>
+    <button onclick="createDiv()">Create</button>
+    <!-- <div id="result"></div> -->
+    <!-- <script src="custom.js"></script> -->
+     <script>
+
+function createDiv(){
+    let bgcolor= document.getElementById("bgcolor").value
+    let height=document.getElementById("height").value
+    let width=document.getElementById("width").value
+    // console.log(bgcolor, height, width);
+    // document.getElementById("result").style.height= height  
+    // document.getElementById("result").style.width= width  
+    // document.getElementById("result").style.backgroundColor= bgcolor  
+    let div= document.createElement("div")
+    div.style.backgroundColor=bgcolor
+    div.style.height=height
+    div.style.width=width
+    div.setAttribute("class","myclass")
+    div.setAttribute("id","myid")
+    // document.getElementById("body").appendChild(div)
+    document.getElementById("body").innerHTML+=`<div style="height:${height}; width:${width}; background-color:${bgcolor}"></div>`
+}
+     </script>
+</body>
+</html>
