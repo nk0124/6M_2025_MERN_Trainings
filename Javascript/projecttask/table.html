@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter the start table</label>
+    <input type="text" id="start"><br>
+    <label>Enter the end table</label>
+    <input type="text" id="end"><br>
+    <button onclick="createTable()">Create Table</button>
+    <div id="result"></div>
+
+    <script>
+        function createTable(){
+            // console.log("create table")
+            let start=parseInt(document.getElementById("start").value);
+            // console.log(start);
+            let end=parseInt(document.getElementById("end").value);
+            // console.log(end);
+            for(i=start;i<=end;i++){
+                // console.log(start+"*"+i+"="+start*i);
+            // document.getElementById("result").innerHTML=start+"*"+i+"="+start*i+"<br>" // replace the pre. item 
+             document.getElementById("result").innerHTML+=start+"*"+i+"="+start*i+"<br>"
+
+            }
+        }
+    </script>
+</body>
+</html>
