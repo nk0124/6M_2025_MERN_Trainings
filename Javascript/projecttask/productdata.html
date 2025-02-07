@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Inventory</h1>
+      <label>Enter Product</label>
+      <input type="text" id="userInput">
+      <button onclick="addData()">Add</button><br>
+      <button onclick="showData()">Show</button>
+       <div id="itemList"></div>
+
+      <script>
+          let items=[];
+          function addData(){
+            //   console.log("add data")
+            let userInput=document.getElementById("userInput").value.trim();
+             if(userInput){
+                items.push(userInput);
+                document.getElementById("userInput").value='';
+             }
+          }
+
+          function showData() {
+            let itemList = document.getElementById('itemList');
+            itemList.innerHTML = '';
+            
+            items.forEach((item, index) => {
+                let itemDiv = document.createElement('div');
+                itemDiv.classList.add('item');
+                itemDiv.innerHTML = `<p>${item}</p>`;
+                itemList.appendChild(itemDiv);
+            });
+        }
+       
+     </script>
+</body>
+</html>
