@@ -1,0 +1,41 @@
+
+Skip to main content
+Google Classroom
+MERN STACK 2025
+9-11 (JANKI)
+  
+Null validation and Regular expression
+Janki Singh
+•
+12:06 PM
+
+nav.html
+HTML
+
+null.html
+HTML
+
+regex.html
+HTML
+Class comments
+
+Add class comment…
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getLoc()">
+    <script>
+        function getLoc(){
+          window.navigator.geolocation.getCurrentPosition((loc,err)=>{
+            console.log(loc.coords.latitude);
+            console.log(loc.coords.longitude);
+           })
+        }
+    </script>
+</body>
+</html>
