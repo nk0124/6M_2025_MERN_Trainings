@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit.html" onsubmit="return sumbitForm()">
+    <label>Email</label>
+    <input id="email"  type="email" required>
+    <br>
+    <label>Password</label>
+    <input id="password" type="password" required><br>
+    <button >Submit</button>
+</form>
+    <script>
+       function sumbitForm(){
+        //   console.log("check email")
+         let email=document.getElementById("email").value.trim();
+         let password=document.getElementById("password").value.trim()
+         let emailPattern=/^neeta5094@gmail\.com$/;
+         let passwordPattern=/^2025$/;
+
+         if(email.trim().length<=0 || password.trim().length<=0){
+               return false;
+           }   else if(!emailPattern.test(email) || !passwordPattern.test(password)){
+            //    alert("Login unsuccessful");
+               return false;
+               
+            }
+              else if(emailPattern.test(email) && passwordPattern.test(password)){
+               alert("Login successful")
+               window.location.href="submit.html"
+               document.getElementById("email").innerHTML='';
+          } else{
+            alert("Invalid email or password!")
+         }
+       }
+
+   
+    </script>
+</body>
+</html>
