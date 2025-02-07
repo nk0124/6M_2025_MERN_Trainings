@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Actions</title>
+    <style>
+        .container{
+             height: 600px;
+             width: 80%;
+             background-color: rgb(222, 23, 23);
+             margin-left: 150px;
+        }
+        .bg{
+            background-color:rgb(222, 23, 23) ;
+            height: 200px;
+        }
+        .bg input{
+            margin-top: 98px;
+            margin-left: 100px;
+        }
+        .btn{
+            background-color:skyblue;
+            height: 150px;
+            display: flex;
+            align-items: center;
+        }
+        .btn button{
+            margin-left: 58px;
+        }
+        .text{
+            background-color: white;
+            width: 200px;
+            margin-left: 100px;
+            margin-top: 17px;
+        }
+        .imgdiv{
+            display: flex;
+            justify-content: center;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bg">
+             <input type="text" id="input1">
+             <input type="text" id="input2">
+        </div>
+        <div class="btn">
+            <button onclick="copyToInput2()">Copy Input1 to Input2</button>
+            <button onclick="showAlert()">Show Alert</button>
+            <button onclick="copyToDiv2()">Copy Input1 to Div2</button>
+            <button onclick="concatenateText()">Concatenate Content</button>
+            <button onclick="modifyElements()">Modify Elements</button>
+        </div>
+           <div class="imgdiv">
+            <div class="text">
+            <div style="text-align: center;margin-top: 16px;" id="div1">Hello</div>
+           </div>
+           <div class="text">
+            <div style="text-align: center;margin-top: 16px;" id="div2">Bye</div>
+           </div>
+         </div>
+     </div>
+   <script>
+       function copyToInput2() {
+            // console.log("hello")
+            document.getElementById('input2').value = document.getElementById('input1').value;
+        }
+       function showAlert(){
+        //    console.log("hello")
+        let input1 = document.getElementById('input1').value;
+        let div1 = document.getElementById('div1').innerText;
+        var div2 = document.getElementById('div2').innerText;
+        alert(`Input1: ${input1}`);
+        var div2 = document.getElementById('div2').innerText;
+        alert(`Div1: ${div1}`);
+        var div2 = document.getElementById('div2').innerText;
+        alert(`Div2: ${div2}`);
+       }
+
+      function copyToDiv2() {
+        console.log("hello")
+        document.getElementById('div2').innerText = document.getElementById('input1').value;
+        }
+       
+        function concatenateText() {
+            let input1 = document.getElementById('input1').value;
+            let input2 = document.getElementById('input2').value;
+            let div1 = document.getElementById('div1').innerText;
+            document.getElementById('div1').innerText = div1 + ' ' + input1 + ' ' + input2;
+        }
+        function modifyElements() {
+            document.getElementById('div2').style.backgroundImage = "url('nature.png')";
+            document.getElementById('div2').style.height="200px"
+            document.getElementById('div2').style.backgroundSize = "cover";
+            
+            let input1 = document.getElementById('input1');
+            let input2 = document.getElementById('input2');
+            
+            let radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.id = 'input1';
+            radio.name = 'radioGroup';
+            radio.value = input1.value;
+            input1.replaceWith(radio);
+            
+            let checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = 'input2';
+            checkbox.checked = !!input2.value;
+            input2.replaceWith(checkbox);
+        }
+
+   </script>
+</body>
+</html>
