@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+        <!-- does not submit the form -> form(onsumbit="return fun.") -->
+    <form action="submit.html" onsubmit="return checkForm()">
+        <label>Name</label>
+        <input id="name">
+        <span class="error" id="error"></span>
+        <br>
+        <label>Email</label>
+        <input id="email">
+        <!-- <span class="error" id="error"></span> -->
+        <br>
+        <button>Submit</button>
+    </form>
+    <script>
+        function checkForm(){
+          let name=document.getElementById("name").value
+          let email=document.getElementById("email").value
+            //   console.log(!name);
+            // console.log(name.trim().length);
+            
+            if(name.trim().length<=0 || email.trim().length<=0){
+                return false;
+            }
+            // if(!name.trim()){
+            //     document.getElementById("error").innerHTML="please field this field"
+            //     return false;   
+            // }
+
+            //or - if one is true 
+            // t t =t
+            //t f =t 
+            // f t = t
+            //f f = f
+            //and - if both is true only then is true 
+            // t t =t
+            //t f =f 
+            // f t = f
+            //f f = f
+
+            //!- 
+        }
+    </script>
+</body>
+</html>
