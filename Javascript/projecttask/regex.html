@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Email</label>
+        <input onblur="checkEmail()" id="email">
+c        <br>
+       Pass <input>
+    </form>
+    <script>
+        function checkEmail(){
+            let email=document.getElementById("email").value
+            // console.log(email);
+            let pattern=/^[a-zA-Z0-9\_\-\.]+\@+[a-zA-Z0-9]+\.+[a-zA-Z]{2,3}$/
+            if(pattern.test(email)){
+                // console.log("valid");
+                document.getElementById("error").innerHTML=""
+            }else{
+                // console.log("invalid");
+                document.getElementById("error").innerHTML="Invalid email"
+            }
+        }
+        // /^[6-9]{1}[0-9]{9}$/
+    </script>
+</body>
+</html>
