@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+        .yellow {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <label >Enter the Number</label><br>
+    <input type="number" id="userInput"><br>
+    <button onclick="createResult()">Create</button>
+     <div id="output">result</div>
+
+     <script>
+        function createResult(){
+            // console.log("hello")
+        let number=parseInt(document.getElementById("userInput").value);
+        //  console.log(number);
+        let output=document.getElementById("output");
+        // console.log(output);
+
+        for (let i = 0; i < number; i++) {
+                let div = document.createElement("div");
+                div.className = (number % 2 === 0) ? "red" : "yellow";
+                output.appendChild(div);
+            }
+        }
+     </script>
+</body>
+</html>
