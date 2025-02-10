@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+      }
+      .content {
+        background-color: darkgrey;
+        height: 600px;
+        width: 380px;
+        margin-right: 2px;
+        padding: 10px;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        margin-top: 0px;
+        background-color: dimgrey;
+      }
+      .nav {
+        background-color: darkgrey;
+      }
+      .btn {
+        width: 100px;
+      }
+      .receipt {
+        background-color: white;
+        height: 300px;
+        width: 250px;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <!-- admin -panel -->
+      <div class="content">
+        <h1>Admin</h1>
+        <p>Add a new Product</p>
+        <input type="text" placeholder="Product Name" id="userInput" />
+        <button onclick="addProduct()">Add Product</button>
+        <p>Select a product then add the price per unit</p>
+        <select id="productList"></select>
+        <input type="number" id="price" placeholder="price" /><br />
+        <button onclick="addPrice()">Add Price</button>
+        <div id="output">Result</div>
+      </div>
+      <!-- Checkout section -->
+      <div class="content">
+        <h1>Checkout</h1>
+        <button  onclick="newTransaction()" style="text-align: center; margin-left: 45px">
+          New Transaction
+        </button>
+        <p>Select a product then add the price per unit</p>
+        <select id="productDropDown"></select>
+        <label>Unit:</label>
+        <input type="text" style="width: 12px" id="unit" /><br />
+        <button onclick="addToCart()">Add to Cart</button><br />
+        <button class="btn">1</button>
+        <button class="btn">2</button><br />
+        <button class="btn">3</button>
+        <button class="btn">4</button><br />
+        <button class="btn">5</button>
+        <button class="btn">6</button><br />
+        <button class="btn">7</button>
+        <button class="btn">8</button><br />
+        <button class="btn" style="width: 100px; margin-left: 50px">9</button
+        ><br /><br />
+        <button onclick="showReceipt()" style="width: 90px; margin-left: 150px">
+          Pay
+        </button>
+      </div>
+      <!-- receipt section -->
+      <div class="content">
+        <h1>Receipt</h1>
+        <div class="receipt">
+          <p id="date"></p>
+          <p id="time"></p>
+          <table border="1px" id="productTable">
+            <tr>
+              <th>Product</th>
+              <th>$/unit</th>
+              <th>Unit(s)</th>
+              <th>Price</th>
+            </tr>
+            <tbody id="tableBody"></tbody>
+          </table>
+          <p>Total Price: $<span id="totalPrice">0</span></p>
+          <p>Taxes (10%): $<span id="taxes">0</span></p>
+          <p>Amount Due: $<span id="amountDue">0</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- <scrip src="receipt.js"></script> -->
+        <script>
+            let items = {};
+            
+            function addProduct() {
+              let userInput = document.getElementById("userInput").value.trim();
+              if (userInput === "") {
+                alert("Please enter a product name");
+                return;
+              }
+              items[userInput] = null; // Initialize without price
+              document.getElementById("userInput").value = "";
+      
+              let dropdown = document.getElementById("productList");
+              let optionItem = document.createElement("option");
+              optionItem.textContent = userInput;
+              optionItem.value = userInput;
+              dropdown.appendChild(optionItem);
+      
+              document.getElementById("output").innerHTML = `Product "${userInput}" added to list`;
+            }
+      
+            function addPrice() {
+              let product = document.getElementById("productList").value;
+              let price = document.getElementById("price").value.trim();
+              
+              if (!product || !price) {
+                alert("Select a product and enter a price");
+                return;
+              }
+      
+              items[product] = parseFloat(price);
+              document.getElementById("price").value = "";
+              document.getElementById("output").innerHTML = `Price of "${product}" set to $${price}`;
+            }
+      
+            function newTransaction() {
+              let productList = document.getElementById("productList");
+              let selectedProduct = productList.value;
+              let price = items[selectedProduct];
+      
+              if (!selectedProduct || price === null) {
+                alert("Please select a valid product with a price.");
+                return;
+              }
+      
+              let dropdown = document.getElementById("productDropDown");
+              let formattedText = `${selectedProduct}, $${price}/unit`;
+      
+              let exists = Array.from(dropdown.options).some(option => option.value === formattedText);
+              if (!exists) {
+                let optionItem = document.createElement("option");
+                optionItem.textContent = formattedText;
+                optionItem.value = formattedText;
+                dropdown.appendChild(optionItem);
+              }
+            }
+      
+            document.querySelectorAll(".btn").forEach((button) => {
+              button.addEventListener("click", function () {
+                document.getElementById("unit").value = this.innerText;
+              });
+            });
+      
+            function addToCart() {
+              alert("Added to Cart");
+            }
+      
+            function showReceipt() {
+              let date = new Date();
+              document.getElementById("date").innerHTML = `Date: ${date.toLocaleDateString("en-GB")}`;
+              document.getElementById("time").innerHTML = `Time: ${date.toLocaleTimeString("en-US")}`;
+      
+              let productSelect = document.getElementById("productDropDown");
+              let selectedOption = productSelect.options[productSelect.selectedIndex].text;
+              let pricePerUnit = parseFloat(selectedOption.match(/\$(\d+)/)[1]);
+      
+              let units = parseInt(document.getElementById("unit").value) || 0;
+              if (units <= 0) {
+                alert("Please enter a valid unit count.");
+                return;
+              }
+      
+              let totalPrice = pricePerUnit * units;
+              let tax = totalPrice * 0.10;
+              let amountDue = totalPrice + tax;
+      
+              let tableBody = document.getElementById("tableBody");
+              let row = `<tr>
+                          <td>${selectedOption.split(",")[0]}</td>
+                          <td>$${pricePerUnit}</td>
+                          <td>${units}</td>
+                          <td>$${totalPrice.toFixed(2)}</td>
+                         </tr>`;
+              tableBody.innerHTML += row;
+      
+              document.getElementById("totalPrice").textContent = totalPrice.toFixed(2);
+              document.getElementById("taxes").textContent = tax.toFixed(2);
+              document.getElementById("amountDue").textContent = amountDue.toFixed(2);
+            }
+          </script>
+</body>
+</html>
