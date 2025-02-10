@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="newWin()">Open</button>
+    <button onclick="closeWin()">Close</button>
+    <button onclick="printScreen()">Print</button>
+    <div id="table">
+        <table border="1px" >
+            <tr>
+                <td>Name</td>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td>Janki</td>
+                <td>Jalandhar</td>
+            </tr>
+        </table>
+    </div>
+    <button onclick="printTable()">Print </button>
+    <script>
+        function newWin(){
+          let x=  window.open()
+          x.document.write("hello")
+        }
+        function closeWin(){
+            window.close()
+        }
+        function printScreen(){
+            window.print()
+        }
+        function printTable(){
+            let screen=  window.open()
+            let table= document.getElementById("table").innerHTML
+            screen.document.write(table)
+            screen.print()
+        }
+    </script>
+</body>
+</html>
