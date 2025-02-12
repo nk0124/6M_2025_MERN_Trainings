@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: dimgray;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+        }
+        .content{
+            background-color: white;
+            width: 260px;
+            height: 250px;
+            padding: 5px;
+        }
+        input{
+            margin-left: 10px;
+        }
+        button{
+            background-color:#0080ff;
+            color:white;
+            padding: 2px;
+            margin-left: 3px;
+            margin-top: 2px;
+        }
+        ul{
+           list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+             <h1 style="margin-left: 5px;">To-Do List</h1>
+             <input type="text" id="todoInput" placeholder="Add a new to-do">
+             <button onclick="addTask()">Add</button>
+             <ul id="todoList"></ul>
+        </div>
+    </div>
+      <script>
+         function addTask(){
+            // console.log("add task");
+            let todoInput=document.getElementById("todoInput");
+            let taskText =todoInput.value.trim();
+            if(todoInput==="") return ;
+
+            let li = document.createElement("li");
+            let span = document.createElement("span");
+            // console.log(span);
+            span.innerHTML = taskText;
+            // console.log(span.textContent)
+
+            let editBtn=document.createElement("button");
+            editBtn.textContent = "Edit";
+            editBtn.onclick = function(){
+                let newText = prompt("Edit task:" , span.textContent)
+                if(newText !==null && newText.trim()!== ""){
+                    span.textContent = newText;
+                }
+            }
+
+            let deleteBtn = document.createElement("button")
+            deleteBtn.textContent = "Delete";
+            deleteBtn.onclick = function(){
+                li.remove();
+            }
+            
+            li.appendChild(span);
+            li.appendChild(editBtn);
+            li.appendChild(deleteBtn);
+            document.getElementById("todoList").appendChild(li);
+
+            todoInput.value="";
+         }
+      </script>
+
+</body>
+</html>
