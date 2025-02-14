@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Enter to-do" id="in1">
+    <button onclick="addToDo()">Add</button>
+    <div id="output"></div>
+    <script>
+        let todo=[]
+        function addToDo(){
+            document.getElementById("output").innerHTML=""
+            let in1=document.getElementById("in1").value 
+            todo.push(in1)
+            // console.log(todo);
+            document.getElementById("in1").value=""
+            // todo.forEach((el,index)=>{
+            //     document.getElementById("output").innerHTML+=`<div><span id="id${index+1}">${el}</span><button onclick="editTodo(${index+1})">Edit</button></div>`
+            // })
+            todo.forEach((el,index)=>{
+                document.getElementById("output").innerHTML+=`<div><span>${el}</span><button onclick="editTodo(${index})">Edit</button></div>`
+            })
+        }
+        // function editTodo(index){
+        //     let editData=prompt("Edit to-do")
+        //     document.getElementById("id"+index).innerHTML=editData
+        // }
+        function editTodo(index){
+            let output=document.getElementById("output")
+            let span=output.querySelectorAll("span")[index]
+            // console.log(span.textContent);          
+            let editData=prompt("Edit to-do",span.textContent )
+            span.textContent=editData
+        }
+    </script>
+</body>
+</html>
