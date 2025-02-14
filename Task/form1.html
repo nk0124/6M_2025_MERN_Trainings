@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- methods - get,post -->
+    <form action="submit.html" method="post">
+        <label>Name</label>
+        <input type="text" name="username" required>
+        <br>
+        <label>Email</label>
+        <input type="email" name="email"
+        placeholder="Eg:janki@gmail.com">
+        <br>
+        <label>Password</label>
+        <input type="password" name="password">
+        <br>
+        <label>Age</label>
+        <input type="number" name="age"
+        min="18" max="30" value="23" readonly>
+        <br>
+        <label>Contact</label>
+        <input type="tel" name="contact" minlength="10" maxlength="10" disabled>
+        <br>
+        <label>DOB</label>
+        <!-- year-month-date -->
+        <input type="date" name="dob" min="2025-01-07">
+        <br>
+        <label>Time</label>
+        <input type="time" name="time">
+        <br>
+        <label>Month</label>
+        <input type="month" name="month">
+        <br>
+        <label>Image</label>
+        <input type="file" name="image" multiple accept=".jpg">
+        <br>
+        <label>Color</label>
+        <input type="color" name="color">
+        <br>
+        <label>Range</label>
+        <input type="range" name="range" value="10">
+        <br>
+        <label>Gender</label>
+        <!-- choose a single option then we can reffer it -->
+        <input type="radio" name="gender" value="M">Male
+         <input type="radio" name="gender" value="F">Female
+         <input type="radio" name="gender" value="O">Others
+         <br>
+         <label>Hobbies</label>
+         <!-- choose a multiple option then we can reffer it -->
+         <input type="checkbox" name="hobby">Drawing
+         <input type="checkbox" name="hobby">Singing
+         <input type="checkbox" name="hobby">Dancing
+         <input type="checkbox" name="hobby">Riding
+         <input type="checkbox" name="hobby">Games
+         <input type="checkbox" name="hobby">Reading
+         <br>
+         <label >Address:</label>
+         <textarea  rows="10" cols="50">hello</textarea>
+         <br>
+         <label >State</label>
+         <select name="state">
+            <option value="1">Punjab</option>
+            <option value="2">Uttrakhand</option>
+            <option value="3">Kanyakumari</option>
+            <option value="4">Kerala</option>
+            <option selected disabled value="">Choose One</option>
+         </select>
+         <br>
+         <label >City</label>
+         <input list="city"> 
+         <datalist id="city">
+            <option >Jalandhar</option>
+            <option >Jallabad</option>
+            <option >Amritsar</option>
+            <option >Phagwara</option>
+            <option >Kartarpur</option>
+         </datalist>
+         <br>
+         <input type="checkbox" checked>T&Cacute;
+         <br>
+         <input type="hidden" value="janki123" name="hid_input">
+         <input type="submit">
+         <!-- we can change the type of sumbit  -->
+          <input type="submit" value="Register">
+          <input type="button">
+          <input type="button" value="BTN">
+          <input type="reset">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+          <button type="button">BTN</button>
+    </form>
+</body>
+</html>
