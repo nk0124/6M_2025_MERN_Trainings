@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Movie</title>
+    <style>
+        .container p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 25pt;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+        }
+        .listitem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .img {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .img img {
+            width: 100px;
+            height: 100px;
+            display: none;
+        }
+        .input {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .input input {
+            height: 50px;
+            width: 50px;
+            font-size: 20pt;
+            text-align: center;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Guess the Movie</p>
+        <div class="listitem">
+            <ul>
+                <li>It is a horror movie</li>
+                <li>It's a Bollywood movie</li>
+                <li>It was released in 2008</li>
+                <li>Starring Adah Sharma</li>
+            </ul>
+        </div>
+        <div class="img">
+            <img src="" alt="" class="digit-img">
+            <img src="" alt="" class="digit-img">
+            <img src="" alt="" class="digit-img">
+            <img src="" alt="" class="digit-img">
+        </div>
+        <div class="input">
+            <input type="text" maxlength="1" autofocus>
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+        </div>
+    </div>
+
+    <script>
+        let correctYear = "2002".split('');  // ["2", "0", "0", "8"]
+        let inputs = document.querySelectorAll(".input input");
+        let images = document.querySelectorAll(".img img");
+
+        function checkAnswer(index) {
+            let userDigit = inputs[index].value;
+            let correctDigit = correctYear[index];
+
+            images[index].src = userDigit === correctDigit ? "image1.png" : "image2.png";
+            images[index].style.display = "block";
+        }
+
+        inputs.forEach((input, index) => {
+            input.addEventListener("input", (event) => {
+                if (!/^[0-9]$/.test(event.target.value)) {
+                    event.target.value = "";
+                    return;
+                }
+
+                input.disabled = true;
+
+                if (index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+
+                checkAnswer(index);
+            });
+
+            input.addEventListener("keydown", (event) => {
+                if (event.key === "Backspace") {
+                    input.value = "";
+                    input.disabled = false;
+
+                    if (index > 0) {
+                        inputs[index - 1].focus();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
