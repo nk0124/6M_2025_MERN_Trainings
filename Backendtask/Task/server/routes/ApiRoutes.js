@@ -8,11 +8,10 @@ const router=require("express").Router()
 
 //category routes
 // to post / add the product in db
-router.get("/category/add", CategoryController.add)
-// router.get("/category/all", CategoryController.all)
-router.get("/product/add" , ProductController.add)
-// router.get("/product/all" , ProductController.all)
-router.get("/brand/add" , BrandController.add)
+router.post("/category/add", CategoryController.add)
+router.post("/product/add" , ProductController.add)
+router.post("/brand/add" , BrandController.add)
+
 
 
 ///router.method("endpoint", method)

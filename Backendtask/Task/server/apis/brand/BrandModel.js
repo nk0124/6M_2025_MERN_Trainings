@@ -2,6 +2,7 @@
 
 const mongoose=require("mongoose")
 let BrandSchema=mongoose.Schema({
+    autoId:{type:Number, default:1},
     brandName:{type:String, default:""},
     logo:{type:String, default:""},
 

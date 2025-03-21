@@ -1,29 +1,77 @@
 const CategoryModel=require("./CategoryModel")
 
 
-add=(req,res)=>{
-       let categoryObj= new CategoryModel()
-        categoryObj.categoryName=req.query.categoryName
-        categoryObj.description=req.query.description
-        categoryObj.save()
-        .then((categoryData)=>{
-            res.json({
-                status:200,
-                success:true,
-                message:"Category Added!!",
-                data:categoryData
+add= (req,res)=>{
+    // console.log("hello world!")
+      CategoryModel.findOne({categoryName:req.body.categoryName})
+    .then(async (categoryData)=>{
+       if(!categoryData){
+         let categoryObj= new CategoryModel()
+            let total=await CategoryModel.countDocuments().exec()
+            categoryObj.autoId=total+1
+            categoryObj.categoryName=req.body.categoryName
+            categoryObj.description=req.body.description
+            categoryObj.save()
+            .then((categoryData)=>{
+                 res.json({
+                    status:200,
+                    success:true,
+                    message:"Category Added!!",
+                    data:categoryData
+                })
             })
-        })
-        .catch((err) => {
-            res.json({
-                status: 500,
-                success: false,
-                message: "Internal server error!",
-                error: err
+            .catch((err)=>{
+                res.json({
+                    status:500,
+                    success:false,
+                    message:"Internal server error!",
+                    error:err
+                })
             })
+        
+       }else{
+        res.json({
+            status:200,
+            success:true,
+            message:"Category already exist with same name",
+            data:categoryData
         })
-
+       }
+        
+    })
+    .catch((err)=>{
+        res.json({
+            status:500,
+            success:false,
+            message:"Internal server error!",
+            error:err
+        })
+    })
 }
+
+// add=(req,res)=>{
+//        let categoryObj= new CategoryModel()
+//         categoryObj.categoryName=req.query.categoryName
+//         categoryObj.description=req.query.description
+//         categoryObj.save()
+//         .then((categoryData)=>{
+//             res.json({
+//                 status:200,
+//                 success:true,
+//                 message:"Category Added!!",
+//                 data:categoryData
+//             })
+//         })
+//         .catch((err) => {
+//             res.json({
+//                 status: 500,
+//                 success: false,
+//                 message: "Internal server error!",
+//                 error: err
+//             })
+//         })
+
+// }
 
 // const get=(req,res)=>{
 //     CategoryModel.find()
@@ -65,14 +113,8 @@ const get = async (req, res) => {
 }
 
 
-// all=(req,res)=>{
-//     res.json({
-//         status:200,
-//         success:true,
-//         message:"data  api is working!!"
-//     })
-// }
 
 
 
-module.exports={add,get}
+
+module.exports={add , get}
